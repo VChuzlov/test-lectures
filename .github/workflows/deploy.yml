@@ -1,0 +1,101 @@
+name: Deploy lectures to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # позволяет запускать вручную
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build lecture 01-intro
+        run: |
+          npx slidev build lectures/01-intro/slides.md \
+            --base /test-lectures/lectures/01-intro/ \
+            --out public/lectures/01-intro
+
+      # Здесь будут добавляться другие лекции:
+      # - name: Build lecture 02-variables
+      #   run: |
+      #     npx slidev build lectures/02-variables/slides.md \
+      #       --base /python-chem-lectures/lectures/02-variables/ \
+      #       --out public/lectures/02-variables
+
+      - name: Create index.html
+        run: |
+          cat > public/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="ru">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Основы программирования — лекции</title>
+            <style>
+              body {
+                font-family: system-ui, -apple-system, sans-serif;
+                max-width: 800px;
+                margin: 40px auto;
+                padding: 0 20px;
+                line-height: 1.6;
+              }
+              h1 { color: #16213e; }
+              a { 
+                display: block;
+                padding: 12px 16px;
+                margin: 8px 0;
+                background: #f0f9ff;
+                border-radius: 8px;
+                text-decoration: none;
+                color: #2563eb;
+                font-weight: 500;
+              }
+              a:hover { background: #dbeafe; }
+            </style>
+          </head>
+          <body>
+            <h1>Основы программирования: Python для химиков-технологов</h1>
+            <p>Список лекций:</p>
+            <a href="/test-lectures/lectures/01-intro/">Лекция 1: Введение</a>
+            <!-- Здесь появятся ссылки на другие лекции -->
+          </body>
+          </html>
+          EOF
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
