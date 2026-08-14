@@ -26,23 +26,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: ''  # убираем кэширование, так как нет package-lock.json
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --no-package-lock
 
       - name: Build lecture 01-intro
         run: |
           npx slidev build lectures/01-intro/slides.md \
             --base /test-lectures/lectures/01-intro/ \
             --out public/lectures/01-intro
-
-      # Здесь будут добавляться другие лекции:
-      # - name: Build lecture 02-variables
-      #   run: |
-      #     npx slidev build lectures/02-variables/slides.md \
-      #       --base /python-chem-lectures/lectures/02-variables/ \
-      #       --out public/lectures/02-variables
 
       - name: Create index.html
         run: |
