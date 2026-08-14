@@ -4,6 +4,25 @@ title: Введение в Python для химиков-технологов
 css: styles.css
 ---
 
+<script setup>
+import { isDark, toggleDark } from '@slidev/client'
+</script>
+
+<!-- Кнопка переключения темы в правом верхнем углу -->
+<div class="absolute top-4 right-4 z-10">
+  <button 
+    @click="toggleDark()" 
+    class="px-3 py-1.5 rounded-lg text-sm font-medium
+           bg-gray-200 text-gray-800 
+           dark:bg-gray-700 dark:text-gray-200
+           hover:bg-gray-300 dark:hover:bg-gray-600
+           transition-colors duration-200"
+  >
+    <span v-if="isDark">☀️ Светлая тема</span>
+    <span v-else>🌙 Тёмная тема</span>
+  </button>
+</div>
+
 ---
 layout: center
 ---
