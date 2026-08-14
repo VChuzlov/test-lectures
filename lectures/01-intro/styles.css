@@ -33,9 +33,21 @@ html.dark {
 }
 
 /* ============================================
-   СКРЫВАЕМ НАВИГАЦИЮ SLIDEV
+   СКРЫВАЕМ ВСТРОЕННУЮ НАВИГАЦИЮ SLIDEV
    ============================================ */
 
-.slidev-nav {
+/* Кнопки "следующий слайд" внизу */
+.slidev-controls {
+  display: none !important;
+}
+
+/* Панель с номером слайда и навигацией */
+.navigate-bar {
+  display: none !important;
+}
+
+/* Любые кнопки навигации в углу */
+button[class*="slidev-icon-btn"],
+button[class*="nav"] {
   display: none !important;
 }
