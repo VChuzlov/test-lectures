@@ -1,0 +1,41 @@
+/* ============================================
+   СВЕТЛАЯ ТЕМА (по умолчанию)
+   ============================================ */
+
+:root {
+  --slidev-slide-background: #ffffff;
+  --slidev-slide-color: #1a1a2e;
+  --slidev-heading-color: #16213e;
+  --slidev-code-background: #f4f4f5;
+  --slidev-code-color: #2d2d2d;
+  --slidev-code-border: #e4e4e7;
+  --slidev-link-color: #2563eb;
+  --plot-background: #ffffff;
+  --plot-grid: #e5e7eb;
+  --plot-text: #1f2937;
+}
+
+/* ============================================
+   ТЁМНАЯ ТЕМА (html.dark)
+   ============================================ */
+
+html.dark {
+  --slidev-slide-background: #0f172a;
+  --slidev-slide-color: #e2e8f0;
+  --slidev-heading-color: #f1f5f9;
+  --slidev-code-background: #1e293b;
+  --slidev-code-color: #e2e8f0;
+  --slidev-code-border: #334155;
+  --slidev-link-color: #60a5fa;
+  --plot-background: #0f172a;
+  --plot-grid: #334155;
+  --plot-text: #e2e8f0;
+}
+
+/* ============================================
+   СКРЫВАЕМ НАВИГАЦИЮ SLIDEV
+   ============================================ */
+
+.slidev-nav {
+  display: none !important;
+}
