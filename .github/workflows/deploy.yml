@@ -33,10 +33,23 @@ jobs:
 
       - name: Build lecture 01-intro
         run: |
-          mkdir -p public/lectures/01-intro
+          echo "=== 1. Текущая директория ==="
+          pwd
+          echo ""
+          echo "=== 2. Содержимое текущей директории ==="
+          ls -la
+          echo ""
+          echo "=== 3. Содержимое lectures/01-intro/ ==="
+          ls -la lectures/01-intro/
+          echo ""
+          echo "=== 4. Запускаем сборку с подробным логом ==="
           npx slidev build lectures/01-intro/slides.md \
             --base /test-lectures/lectures/01-intro/ \
-            --out public/lectures/01-intro
+            --out public/lectures/01-intro \
+            --verbose
+          echo ""
+          echo "=== 5. Что получилось в public/ ==="
+          find public/ -type f
 
       - name: Create index.html
         run: |
