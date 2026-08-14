@@ -36,13 +36,13 @@ jobs:
           echo "=== 1. Собираем презентацию ==="
           npx slidev build lectures/01-intro/slides.md \
             --base /test-lectures/lectures/01-intro/ \
-            --out public/lectures/01-intro
+            --out /home/runner/work/test-lectures/test-lectures/public/lectures/01-intro
           echo ""
           echo "=== 2. Что получилось ==="
-          ls -la public/lectures/01-intro/ | head -20
+          ls -la /home/runner/work/test-lectures/test-lectures/public/lectures/01-intro/ | head -20
           echo ""
           echo "=== 3. Проверяем index.html ==="
-          ls -la public/lectures/01-intro/index.html
+          ls -la /home/runner/work/test-lectures/test-lectures/public/lectures/01-intro/index.html
 
       - name: Create index.html
         run: |
