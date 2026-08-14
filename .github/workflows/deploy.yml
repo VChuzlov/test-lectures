@@ -39,6 +39,7 @@ jobs:
 
       - name: Create index.html
         run: |
+          mkdir -p public
           cat > public/index.html << 'EOF'
           <!DOCTYPE html>
           <html lang="ru">
