@@ -5,10 +5,19 @@ css: styles.css
 ---
 
 <script setup>
-import { isDark, toggleDark } from '@slidev/client'
+import { useDark, useToggle } from '@vueuse/core'
+
+const isDark = useDark({
+  selector: 'html',
+  attribute: 'class',
+  valueDark: 'dark',
+  valueLight: '',
+})
+
+const toggleDark = useToggle(isDark)
 </script>
 
-<!-- Кнопка переключения темы в правом верхнем углу -->
+<!-- Кнопка переключения темы -->
 <div class="absolute top-4 right-4 z-10">
   <button 
     @click="toggleDark()" 
