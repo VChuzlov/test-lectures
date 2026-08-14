@@ -4,19 +4,6 @@ title: Введение в Python для химиков-технологов
 css: styles.css
 ---
 
-<script setup>
-import { useDark, useToggle } from '@vueuse/core'
-
-const isDark = useDark({
-  selector: 'html',
-  attribute: 'class',
-  valueDark: 'dark',
-  valueLight: '',
-})
-
-const toggleDark = useToggle(isDark)
-</script>
-
 <!-- Кнопка переключения темы в правом верхнем углу -->
 <div class="absolute top-4 right-4 z-10 flex gap-2">
   <button 
