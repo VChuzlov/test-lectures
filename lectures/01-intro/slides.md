@@ -5,7 +5,16 @@ css: styles.css
 ---
 
 <script setup>
-import { isDark, toggleDark } from '@slidev/client/logic/dark.ts'
+import { useDark, useToggle } from '@vueuse/core'
+
+const isDark = useDark({
+  selector: 'html',
+  attribute: 'class',
+  valueDark: 'dark',
+  valueLight: '',
+})
+
+const toggleDark = useToggle(isDark)
 </script>
 
 <!-- Кнопка переключения темы в правом верхнем углу -->
