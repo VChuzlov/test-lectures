@@ -5,30 +5,27 @@ css: styles.css
 ---
 
 <script setup>
-import { useDark, useToggle } from '@vueuse/core'
+import { ref } from 'vue'
 
-const isDark = useDark({
-  selector: 'html',
-  attribute: 'class',
-  valueDark: 'dark',
-  valueLight: '',
-})
+const isDark = ref(document.documentElement.classList.contains('dark'))
 
-const toggleDark = useToggle(isDark)
+function toggleTheme() {
+  document.documentElement.classList.toggle('dark')
+  isDark.value = document.documentElement.classList.contains('dark')
+}
 </script>
 
 <!-- Кнопка переключения темы -->
-<div class="absolute top-4 right-4 z-10">
+<div class="absolute top-4 right-4 z-50">
   <button 
-    @click="toggleDark()" 
+    @click="toggleTheme()" 
     class="px-3 py-1.5 rounded-lg text-sm font-medium
            bg-gray-200 text-gray-800 
            dark:bg-gray-700 dark:text-gray-200
            hover:bg-gray-300 dark:hover:bg-gray-600
-           transition-colors duration-200"
+           transition-colors duration-200 cursor-pointer"
   >
-    <span v-if="isDark">☀️ Светлая тема</span>
-    <span v-else>🌙 Тёмная тема</span>
+    {{ isDark ? '☀️ Светлая тема' : '🌙 Тёмная тема' }}
   </button>
 </div>
 
