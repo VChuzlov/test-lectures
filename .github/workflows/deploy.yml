@@ -33,6 +33,7 @@ jobs:
 
       - name: Build lecture 01-intro
         run: |
+          mkdir -p public/lectures/01-intro
           npx slidev build lectures/01-intro/slides.md \
             --base /test-lectures/lectures/01-intro/ \
             --out public/lectures/01-intro
