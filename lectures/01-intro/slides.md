@@ -42,6 +42,7 @@ layout: center
   Кафедра химической технологии • 2026
 </div>
 
+
 ---
 layout: default
 ---
