@@ -1,0 +1,179 @@
+/* =============================================================================
+   style.css — единые токены светлой и тёмной темы для лекций Slidev
+   -----------------------------------------------------------------------------
+   Правило: в слайдах НИКОГДА не пишем цвет напрямую (#2bb671), только токен
+   (var(--brand)). Тогда светлая тема — это один блок переопределений, а не
+   вторая копия презентации.
+
+   Slidev переключает тему, вешая класс .dark на <html>. Поэтому:
+     :root       — значения для СВЕТЛОЙ темы (база)
+     html.dark   — переопределения для ТЁМНОЙ
+
+   Подключается в headmatter слайда:  css: unocss   +  импорт этого файла
+   (см. lectures/lec-01/style.css)
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* поверхности и текст */
+  --surface:        #fcfcfb;
+  --surface-2:      #f2f2ef;
+  --ink:            #1a1a19;
+  --ink-2:          #52514e;
+  --ink-muted:      #86857f;
+  --line:           #dededa;
+
+  /* фирменный зелёный ТПУ, шаг для СВЕТЛОГО фона (нужен темнее) */
+  --brand:          #0f7a3d;
+  --brand-2:        #12a05e;
+  --brand-soft:     #e4f5ea;
+
+  /* акценты для выделений в тексте */
+  --accent-warn:    #a35a00;
+  --accent-danger:  #c02a2a;
+
+  /* палитра серий для графиков (--s1..--s6).
+     Проверена на различимость при протанопии/дейтеранопии/тританопии
+     на светлой подложке #fcfcfb. НЕ менять по одному цвету — только всем набором. */
+  --s1: #2a78d6;
+  --s2: #eb6834;
+  --s3: #1baf7a;
+  --s4: #eda100;
+  --s5: #e87ba4;
+  --s6: #008300;
+  --s7: #4a3aa7;
+  --s8: #e34948;
+}
+
+html.dark {
+  color-scheme: dark;
+
+  --surface:        #1a1a19;
+  --surface-2:      #262624;
+  --ink:            #e8eaed;
+  --ink-2:          #c3c2b7;
+  --ink-muted:      #8b8a82;
+  --line:           #3a3a37;
+
+  /* тот же зелёный, шаг для ТЁМНОГО фона */
+  --brand:          #2bb671;
+  --brand-2:        #4ed48a;
+  --brand-soft:     #123a26;
+
+  --accent-warn:    #e0a33a;
+  --accent-danger:  #ef6b6b;
+
+  /* те же шесть оттенков, перешагнутые под тёмную подложку #1a1a19 */
+  --s1: #3987e5;
+  --s2: #d95926;
+  --s3: #199e70;
+  --s4: #c98500;
+  --s5: #d55181;
+  --s6: #008300;
+  --s7: #9085e9;
+  --s8: #e66767;
+}
+
+/* ============================ типографика ================================= */
+
+.slidev-layout {
+  color: var(--ink);
+}
+
+.slidev-layout h1 {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 2.0em;
+  line-height: 1.25;
+  margin: 0 0 0.4em;
+  /* градиент по фирменным токенам: сам переключается вместе с темой */
+  background-image: linear-gradient(45deg, var(--brand-2) 10%, var(--brand) 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.slidev-layout h2 { font-size: 1.5em; color: var(--ink); }
+.slidev-layout h3 { font-size: 1.15em; color: var(--ink-2); }
+
+.slidev-layout p,
+.slidev-layout li { color: var(--ink); }
+
+.slidev-layout a { color: var(--brand); text-decoration: underline; }
+
+blockquote {
+  border-left: 3px solid var(--brand);
+  background: var(--brand-soft);
+  padding: 0.4em 0.9em;
+  border-radius: 0 6px 6px 0;
+}
+
+/* аккуратные таблицы */
+table { border-collapse: collapse; }
+th, td { border-bottom: 1px solid var(--line); padding: 4px 10px; }
+th { color: var(--ink-2); font-weight: 600; }
+
+.small-table { font-size: 0.75em; width: auto !important; margin: 0 auto; }
+.small-table td, .small-table th { padding: 2px 6px; white-space: nowrap; }
+
+/* вывод программы: «как в консоли» */
+.output {
+  font-family: 'JetBrains Mono', Consolas, monospace;
+  font-size: 0.78em;
+  color: var(--ink-muted);
+  background: var(--surface-2);
+  border-radius: 6px;
+  padding: 0.4em 0.7em;
+  white-space: pre-wrap;
+}
+
+/* ============================ рисунки ===================================== */
+
+html { counter-reset: figure-num 0; }
+
+figure {
+  counter-increment: figure-num;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6px auto;
+}
+
+figure img, figure svg { max-width: 80%; height: auto; display: block; }
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.78em;
+  color: var(--ink-2);
+  margin-top: 2px;
+}
+
+/* Растровая картинка, нарисованная под светлый фон (скриншот, схема из Word).
+   Класс .invert-on-dark — «дешёвый» способ дожить до перерисовки в SVG. */
+html.dark .invert-on-dark { filter: invert(1) hue-rotate(180deg); }
+
+/* Логотип/иконка одним цветом: красим текстом, а не картинкой */
+.mono-icon { color: var(--brand); }
+
+/* ======================= служебные элементы =============================== */
+
+.slide-no {
+  position: absolute;
+  top: 26px;
+  right: 16px;
+  font-size: 0.8em;
+  color: var(--ink-muted);
+  letter-spacing: 0.15em;
+}
+
+.pill {
+  display: inline-block;
+  padding: 1px 9px;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 0.8em;
+  font-weight: 600;
+}

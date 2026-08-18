@@ -1,10 +1,9 @@
-name: Deploy lectures to GitHub Pages
+name: Собрать и опубликовать сайт лекций
 
 on:
   push:
-    branches:
-      - main
-  workflow_dispatch:  # позволяет запускать вручную
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,83 +11,41 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: ''  # убираем кэширование, так как нет package-lock.json
 
-      - name: Install dependencies
-        run: npm install --no-package-lock
-
-      - name: Build lecture 01-intro
-        run: |
-          echo "=== 1. Собираем презентацию ==="
-          npx slidev build lectures/01-intro/slides.md \
-            --base /test-lectures/lectures/01-intro/ \
-            --out /home/runner/work/test-lectures/test-lectures/public/lectures/01-intro
-          echo ""
-          echo "=== 2. Что получилось ==="
-          ls -la /home/runner/work/test-lectures/test-lectures/public/lectures/01-intro/ | head -20
-          echo ""
-          echo "=== 3. Проверяем index.html ==="
-          ls -la /home/runner/work/test-lectures/test-lectures/public/lectures/01-intro/index.html
-
-      - name: Create index.html
-        run: |
-          mkdir -p public
-          cat > public/index.html << 'EOF'
-          <!DOCTYPE html>
-          <html lang="ru">
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Основы программирования — лекции</title>
-            <style>
-              body {
-                font-family: system-ui, -apple-system, sans-serif;
-                max-width: 800px;
-                margin: 40px auto;
-                padding: 0 20px;
-                line-height: 1.6;
-              }
-              h1 { color: #16213e; }
-              a { 
-                display: block;
-                padding: 12px 16px;
-                margin: 8px 0;
-                background: #f0f9ff;
-                border-radius: 8px;
-                text-decoration: none;
-                color: #2563eb;
-                font-weight: 500;
-              }
-              a:hover { background: #dbeafe; }
-            </style>
-          </head>
-          <body>
-            <h1>Основы программирования: Python для химиков-технологов</h1>
-            <p>Список лекций:</p>
-            <a href="/test-lectures/lectures/01-intro/">Лекция 1: Введение</a>
-            <!-- Здесь появятся ссылки на другие лекции -->
-          </body>
-          </html>
-          EOF
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/setup-python@v5
         with:
-          path: public/
+          python-version: '3.12'
+
+      # Ставим зависимости каждой лекции
+      - name: Установка зависимостей лекций
+        run: |
+          for d in lectures/*/; do
+            if [ -f "$d/package.json" ]; then
+              echo "npm ci в $d"
+              (cd "$d" && npm ci --no-audit --no-fund || npm install --no-audit --no-fund)
+            fi
+          done
+
+      # ВАЖНО: --base должен совпадать с именем репозитория,
+      # если сайт публикуется как https://<user>.github.io/<repo>/
+      - name: Сборка сайта
+        run: python tools/build_site.py --base "/${GITHUB_REPOSITORY#*/}/"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
 
   deploy:
     needs: build
@@ -97,6 +54,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
