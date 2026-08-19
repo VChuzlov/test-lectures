@@ -63,7 +63,7 @@ layout: two-cols
 
 <figcaption>Изобарная теплоёмкость олефинов — 12 строк кода</figcaption>
 
-<div class="slide-no">{{ $nav.currentPage }} / {{ $nav.total }}</div>
+<div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
 
 ---
 
@@ -86,7 +86,7 @@ layout: two-cols
 <span class="pill">Допуск к экзамену</span> &nbsp; ≥ 55 баллов и все 10 ЛБ сданы
 </p>
 
-<div class="slide-no">{{ $nav.currentPage }} / {{ $nav.total }}</div>
+<div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
 
 ---
 
@@ -115,7 +115,7 @@ layout: two-cols
 
 </div>
 
-<div class="slide-no">{{ $nav.currentPage }} / {{ $nav.total }}</div>
+<div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
 
 ---
 
@@ -180,7 +180,7 @@ save_adaptive(fig, 'pics/cp')
 
 </div>
 
-<div class="slide-no">{{ $nav.currentPage }} / {{ $nav.total }}</div>
+<div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
 
 ---
 layout: center
