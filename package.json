@@ -5,7 +5,6 @@
     "build:01-intro": "cd lectures/01-intro && npx slidev build --base /$CI_PROJECT_NAME/lectures/01-intro/ --out ../../public/lectures/01-intro"
   },
   "devDependencies": {
-    // "@slidev/cli": "^51.0.0",
     "@slidev/theme-default": "^0.25.0"
   }
 }
