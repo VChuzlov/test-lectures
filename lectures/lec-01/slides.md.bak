@@ -24,15 +24,11 @@ duration: 90min
 # Заметки докладчика видны только вам (клавиша p -> presenter mode)
 ---
 
-<!-- <div class="cover-bg"></div> -->
-
-<div class="cover-body flex flex-col justify-center h-full">
+<div class="flex flex-col justify-center h-full">
 
 <h1>Основы программирования</h1>
 
 <h2 class="!mt-0">Лекция 1. Знакомство с Python</h2>
-
-<div class="cover-rule"></div>
 
 <p class="text-[var(--ink-2)] mt-8">
 Вячеслав Алексеевич Чузлов<br>
@@ -101,6 +97,22 @@ duration: 90min
 
 ---
 
+# Почему не Excel?
+
+| | Excel | Python |
+|---|---|---|
+| Двадцать чисел, посмотреть глазами | **лучше** | лишние действия |
+| Видно ли, что именно посчитано | формула спрятана внутри ячейки | весь расчёт виден как текст |
+| Объяснить коллеге, что Вы сделали | переслать файл и надеяться | прислать десять строк |
+| Повторить на новых данных | переделать руками | поменять данные, запустить |
+| Предел объёма | 1 048 576 строк на листе | ограничен только памятью |
+| Найти чужую ошибку | почти невозможно | видно построчно |
+
+<div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
+
+
+---
+
 # Язык программирования Python
 
 <div grid='~ cols-2 gap-1'>
@@ -139,68 +151,6 @@ duration: 90min
 </div>
 
 <div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
-
-
----
-
-# Зачем это инженеру-химику-технологу?
-
-<div class='cols-2'>
-
-<div>
-
-Пусть дана следующая схема химических реакций:
-
-$$
-A \rightarrow B \rightarrow C
-$$
-
-с константами скоростей $k_1$ и $k_2$.
-
-Значения констант: <br> $k_1 = 0.2 \ c^{−1}$, $k_2 = 0.8 \ c^{−1}$; 
-
-начальные концентрации: <br> $[A]_0 = 100$, $[B]_0 = 0$, $C_0 = 0$.
-
-<span class='lead'>Необходимо определить значения всех концентраций после 20 секунд.</span>
-
-</div>
-
-<div>
-
-<LightOrDark>
-  <template #dark>
-    <img src='./pics/scipy_ode3.svg'>
-  </template>
-  <template #light>
-    <img src='./pics/scipy_ode3_light.svg'>
-  </template>
-</LightOrDark>
-
-<span class='text-[var(--brand)]'>~20 строк кода</span>
-
-</div>
-
-</div>
-
-
-<div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
-
-
----
-
-# Почему не Excel?
-
-| | Excel | Python |
-|---|---|---|
-| Двадцать чисел, посмотреть глазами | **лучше** | лишние действия |
-| Видно ли, что именно посчитано | формула спрятана внутри ячейки | весь расчёт виден как текст |
-| Объяснить коллеге, что Вы сделали | переслать файл и надеяться | прислать десять строк |
-| Повторить на новых данных | переделать руками | поменять данные, запустить |
-| Предел объёма | 1 048 576 строк на листе | ограничен только памятью |
-| Найти чужую ошибку | почти невозможно | видно построчно |
-
-<div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
-
 
 ---
 
@@ -288,11 +238,9 @@ print('строка 2 выполнилась')
 prnt('опечатка')
 ```
 
-<div class="output">
-строка 1 выполнилась <br>
-строка 2 выполнилась <br>
-NameError: name 'prnt' is not defined
-</div>
+<div class="output">строка 1 выполнилась
+строка 2 выполнилась
+NameError: name 'prnt' is not defined</div>
 
 </div>
 <div>
@@ -320,14 +268,6 @@ print('незакрытая скобка'
 
 
 <div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
-
----
-layout: image-left
-class: flex flex-col items-center justify-center
-image: ./pics/photo_2026-02-19_14-52-25.jpg
----
-
-# Переменные (variables)
 
 
 ---
@@ -455,14 +395,6 @@ print('hello world!')  # print - это функция
 <div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
 
 ---
-layout: image-left
-class: flex flex-col items-center justify-center
-image: ./pics/photo_2026-02-19_14-52-25.jpg
----
-
-# Типы данных
-
----
 
 # Классификация объектов
 
@@ -554,16 +486,6 @@ print(z)
 </div>
 
 <div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
-
-
----
-layout: image-left
-class: flex flex-col items-center justify-center
-image: ./pics/photo_2026-02-19_14-52-25.jpg
----
-
-# Операции с числами
-
 
 ---
 
@@ -760,9 +682,9 @@ print(abs(3 + 4j))  # 5.0
 
 
 ```python
-print(round(-9.62))
+print(round(-9.62), round(7.5))
 ```
-<div class='output'>-10</div>
+<div class='output'>-10 8</div>
 
 ```
 print(round(4.5), round(7.5))
@@ -880,16 +802,6 @@ print('Округление до ближайшего большего:', math.c
 </div>
 
 <div class="slide-no">Слайд {{ $nav.currentPage }} / {{ $nav.total }}</div>
-
----
-layout: image-left
-class: flex flex-col items-center justify-center
-image: ./pics/photo_2026-02-19_14-52-25.jpg
----
-
-# Функция `input()` (оператор ввода данных)
-
-
 ---
 
 # Оператор ввода данных

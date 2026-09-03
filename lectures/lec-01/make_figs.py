@@ -13,28 +13,39 @@ from pathlib import Path
 
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))
-from figtheme import use_adaptive, save_adaptive  # noqa: E402
+from tools.figtheme import use_adaptive, save_adaptive  # noqa: E402
+
 
 use_adaptive()
 
 
-def fig_cp():
-    """Изобарная теплоёмкость олефинов: C_p = A + Bt + Ct² + Dt³ + Et⁴."""
-    T = np.linspace(250, 350, 120)
-
-    def cp(A, B, C, D, E):
-        return A + B * T + C * T**2 + D * T**3 + E * T**4
-
-    fig, ax = plt.subplots(figsize=(5.6, 3.6))
-    ax.plot(T, cp(22.22, 0.1385, 7e-4, -7.7979e-07, 2.362e-10), label="1-гексен")
-    ax.plot(T, cp(18.00, 0.1200, 6e-4, -6.5000e-07, 2.000e-10), ls="--", label="1-пентен")
-    ax.plot(T, cp(14.00, 0.1000, 5e-4, -5.5000e-07, 1.700e-10), ls=":", label="1-бутен")
-    ax.set_xlabel("Температура, K")
-    ax.set_ylabel("C$_p$, Дж/(моль·К)")
-    ax.legend()
-    save_adaptive(fig, "pics/cp")
+def fig_tiobe():
+    data = {
+        'Python': 18.53,
+        'C': 11.10,
+        'C++': 8.62,
+        'Java': 8.25,
+        'C#': 4.09,
+        'JavaScript': 2.63,
+        'Visual Basic': 2.18,
+        'SQL': 1.88,
+        'R': 1.56,
+        'Rust': 1.45,
+    }
+    
+    fig, ax = plt.subplots(figsize=(5.6, 5.5))
+    sns.barplot(
+        data=data,
+        orient='h',
+        ax=ax
+    )
+    ax.bar_label(ax.containers[0], fontsize=10)
+    ax.set_xlabel("Рейтинг, %")
+    plt.tight_layout()
+    save_adaptive(fig, "pics/tiobe")
     plt.close(fig)
 
 
