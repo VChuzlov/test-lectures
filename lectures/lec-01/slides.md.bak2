@@ -24,7 +24,7 @@ duration: 90min
 # Заметки докладчика видны только вам (клавиша p -> presenter mode)
 ---
 
-<div class="cover-bg"></div>
+<!-- <div class="cover-bg"></div> -->
 
 <div class="cover-body flex flex-col justify-center h-full">
 
@@ -324,7 +324,7 @@ print('незакрытая скобка'
 ---
 layout: image-left
 class: flex flex-col items-center justify-center
-image: /pics/photo_2026-02-19_14-52-25.jpg
+image: ./pics/photo_2026-02-19_14-52-25.jpg
 ---
 
 # Переменные (variables)
@@ -457,7 +457,7 @@ print('hello world!')  # print - это функция
 ---
 layout: image-left
 class: flex flex-col items-center justify-center
-image: /pics/photo_2026-02-19_14-52-25.jpg
+image: ./pics/photo_2026-02-19_14-52-25.jpg
 ---
 
 # Типы данных
@@ -559,7 +559,7 @@ print(z)
 ---
 layout: image-left
 class: flex flex-col items-center justify-center
-image: /pics/photo_2026-02-19_14-52-25.jpg
+image: ./pics/photo_2026-02-19_14-52-25.jpg
 ---
 
 # Операции с числами
@@ -884,7 +884,7 @@ print('Округление до ближайшего большего:', math.c
 ---
 layout: image-left
 class: flex flex-col items-center justify-center
-image: /pics/photo_2026-02-19_14-52-25.jpg
+image: ./pics/photo_2026-02-19_14-52-25.jpg
 ---
 
 # Функция `input()` (оператор ввода данных)
@@ -937,7 +937,7 @@ print(x + y)
 
 ---
 layout: image-left
-image: /pics/photo_2025-11-10_15-42-35.jpg
+image: ./pics/photo_2025-11-10_15-42-35.jpg
 class: flex flex-col items-center justify-center
 ---
 

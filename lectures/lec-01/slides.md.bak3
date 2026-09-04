@@ -24,7 +24,7 @@ duration: 90min
 # Заметки докладчика видны только вам (клавиша p -> presenter mode)
 ---
 
-<div class="cover-bg"></div>
+<!-- <div class="cover-bg"></div> -->
 
 <div class="cover-body flex flex-col justify-center h-full">
 
