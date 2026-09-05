@@ -384,10 +384,19 @@ html.dark .invert-on-dark { filter: invert(1) hue-rotate(180deg); }
        </div>
 
    cover-body обязателен — он поднимает текст над фоном.
-   Фото лежат в shared/pics/ — один комплект на весь курс.                   */
+
+   Сами файлы фонов подключаются НЕ здесь, а в style.css лекции — там путь
+   лежит внутри папки слайдов и Vite обрабатывает его как обычный ресурс:
+
+       .cover-bg           { background-image: var(--cover-scrim),
+                             url('./pics/cover-light.jpg'); }
+       html.dark .cover-bg { background-image: var(--cover-scrim),
+                             url('./pics/cover-dark.jpg');  }
+
+   Эталонные копии фото — в shared/pics/, по лекциям их раскладывает
+   tools/build_site.py.                                                       */
 
 :root {
-  --cover-img:   url('./pics/cover-light.jpg');
   --cover-scrim: linear-gradient(96deg,
                    rgba(252, 252, 251, 0.985)  0%,
                    rgba(252, 252, 251, 0.95)  34%,
@@ -396,7 +405,6 @@ html.dark .invert-on-dark { filter: invert(1) hue-rotate(180deg); }
 }
 
 html.dark {
-  --cover-img:   url('./pics/cover-dark.jpg');
   --cover-scrim: linear-gradient(96deg,
                    rgba(26, 26, 25, 0.97)  0%,
                    rgba(26, 26, 25, 0.90) 34%,
@@ -406,9 +414,10 @@ html.dark {
 
 .cover-bg {
   position: absolute;
+  background-color: var(--surface);
   inset: 0;
   overflow: hidden;
-  background-image: var(--cover-scrim), var(--cover-img);
+  /* сама картинка — в shared/cover.css (вшита в base64) */
   background-size: cover, cover;
   background-position: center, 62% 50%;
   background-repeat: no-repeat;
