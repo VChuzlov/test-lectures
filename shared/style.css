@@ -164,9 +164,54 @@ html.dark {
 }
 
 /* ---- код ---------------------------------------------------------------- */
+/*
+   Один моноширинный шрифт на весь код курса — и без лигатур. Студент должен
+   видеть ==, !=, >=, <= ровно так, как увидит их в Spyder, а не слитыми
+   в один знак.
 
+   Почему «просто поменять шрифт» не срабатывало — две причины.
+
+   1. Блок кода Slidev рисует как <pre class="shiki slidev-code"> и в своём
+      code.css задаёт шрифт так:
+          .slidev-code { font-family: var(--slidev-code-font-family) !important }
+      Правило вида `pre code { font-family: Consolas }` такому проигрывает.
+      Ниже перебивается и переменная, и само правило — селектором pre.slidev-code
+      (специфичность выше, чем у .slidev-code, поэтому порядок загрузки
+      стилей уже не важен).
+
+   2. Лигатуры в Fira Code — а её тянет с Google Fonts тема default, см.
+      slidev.defaults.fonts.mono в @slidev/theme-default — сделаны не через
+      liga, а через contextual alternates, фичу calt. По спецификации
+      font-variant-ligatures: none гасит и её, но браузеры делают это
+      непоследовательно, поэтому фичи гасятся ещё и напрямую, через
+      font-feature-settings.                                                  */
+
+:root {
+  /* Consolas — то, что студент видит в Spyder на машинах в аудитории.
+     Дальше запасные моноширинные БЕЗ лигатур, для macOS и Linux.
+     Cascadia Mono (не Code!) и DejaVu Sans Mono лигатур не имеют.            */
+  --code-font: Consolas, 'Cascadia Mono', 'DejaVu Sans Mono',
+               'Liberation Mono', 'Courier New', monospace;
+
+  /* переменная, которой Slidev красит блоки кода */
+  --slidev-code-font-family: var(--code-font);
+}
+
+/* всё, что показывает код: блоки, строчный код, вывод программы */
+pre.slidev-code,
+pre.slidev-code span,
+.slidev-layout pre,
+.slidev-layout pre *,
+.slidev-layout :not(pre) > code,
+.output,
+.output * {
+  font-family: var(--code-font) !important;
+  font-variant-ligatures: none !important;
+  font-feature-settings: 'liga' 0, 'clig' 0, 'calt' 0, 'dlig' 0 !important;
+}
+
+/* оформление строчного кода */
 .slidev-layout :not(pre) > code {
-  font-family: 'JetBrains Mono', Consolas, monospace;
   font-size: 0.88em;
   background: var(--surface-2);
   color: var(--brand);
@@ -275,7 +320,7 @@ html.dark {
 /*  <div class="output">42</div>                                             */
 
 .output {
-  font-family: 'JetBrains Mono', Consolas, monospace;
+  font-family: var(--code-font);
   font-size: 0.78em;
   color: var(--ink-muted);
   background: var(--surface-2);
