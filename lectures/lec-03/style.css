@@ -1,0 +1,18 @@
+/* Локальный style.css лекции.
+   Всё общее лежит в shared/style.css — здесь только то, что специфично
+   для этой лекции. Так тема правится в одном месте на весь курс. */
+
+@import '../../shared/style.css';
+
+/* Фоны титульного слайда.
+   Путь обязан быть написан ЗДЕСЬ, в css внутри папки лекции: тогда это
+   обычный для Vite случай — он сам подставит хеш и базовый URL при сборке.
+   Файлы кладёт tools/build_site.py из shared/pics/, вручную копировать не
+   нужно. Шторка и классы cover-bg / cover-body — в shared/style.css, раздел 5. */
+.cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-light.jpg');
+}
+
+html.dark .cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-dark.jpg');
+}
