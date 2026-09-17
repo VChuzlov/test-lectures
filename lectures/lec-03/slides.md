@@ -453,7 +453,7 @@ while v != 25.0:
 
 <div>
 
-##### <span class='text-[var(--brand)]'>Правильный</span> поход
+##### <span class='text-[var(--brand)]'>Правильный</span> подход
 
 ```python
 drops = 0
