@@ -3,3 +3,7 @@ dist/
 *.pdf
 .DS_Store
 __pycache__/
+site/konspekt/
+site/.vitepress/cache/
+site/.vitepress/lectures.json
+.venv/

@@ -17,8 +17,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # браузер Playwright нужен только для экспорта PDF, не для сборки
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # вся история: из неё берётся дата «Обновлено» у конспекта
 
       - uses: actions/setup-node@v4
         with:
@@ -40,8 +45,20 @@ jobs:
 
       # ВАЖНО: --base должен совпадать с именем репозитория,
       # если сайт публикуется как https://<user>.github.io/<repo>/
-      - name: Сборка сайта
+      - name: Сборка слайдов
         run: python tools/build_site.py --base "/${GITHUB_REPOSITORY#*/}/"
+
+      # Конспекты: генерируются из тех же slides.md и кладутся поверх dist/.
+      # Главная страница VitePress заменяет оглавление из build_site.py,
+      # слайды остаются по старым адресам /<repo>/lec-NN/.
+      - name: Сборка конспектов
+        working-directory: site
+        run: |
+          BASE="/${GITHUB_REPOSITORY#*/}/"
+          npm ci --no-audit --no-fund
+          python ../tools/slides2notes.py --slides-base "$BASE"
+          SITE_BASE="$BASE" npx vitepress build
+          cp -r .vitepress/dist/. ../dist/
 
       - uses: actions/upload-pages-artifact@v3
         with:

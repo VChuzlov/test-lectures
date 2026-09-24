@@ -1,0 +1,208 @@
+/* =============================================================================
+   notes.css — как тема курса (shared/style.css) ложится на страницу-конспект.
+
+   Механика тёмной темы та же, что в Slidev: класс .dark на <html>.
+   Поэтому здесь нет ни одного цвета — только ссылки на токены из
+   shared/style.css. Поменяли зелёный там — поменялся и в слайдах, и здесь.
+   ========================================================================== */
+
+/* ── 1. Переменные VitePress -> токены курса ──────────────────────────────── */
+:root,
+html.dark {
+  --vp-c-brand-1: var(--brand);
+  --vp-c-brand-2: var(--brand-2);
+  --vp-c-brand-3: var(--brand);
+  --vp-c-brand-soft: var(--brand-soft);
+
+  --vp-c-bg: var(--surface);
+  --vp-c-bg-alt: var(--surface-2);
+  --vp-c-bg-soft: var(--surface-2);
+  --vp-c-bg-elv: var(--surface);
+  --vp-nav-bg-color: var(--surface);
+  --vp-sidebar-bg-color: var(--surface-2);
+
+  --vp-c-text-1: var(--ink);
+  --vp-c-text-2: var(--ink-2);
+  --vp-c-text-3: var(--ink-muted);
+  --vp-c-divider: var(--line);
+  --vp-c-gutter: var(--line);
+
+  --vp-font-family-mono: var(--code-font);
+  --vp-code-color: var(--brand);
+  --vp-code-bg: var(--surface-2);
+  --vp-code-block-bg: var(--surface-2);
+  --vp-code-font-size: 0.9em;
+  --vp-code-line-height: 1.6;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(45deg, var(--brand-2) 10%, var(--brand) 70%);
+  --vp-button-brand-bg: var(--brand);
+  --vp-button-brand-hover-bg: var(--brand-2);
+  --vp-button-brand-border: transparent;
+}
+
+/* код без лигатур: == и != студент должен видеть так же, как в Spyder */
+.vp-doc pre, .vp-doc code, .vp-doc .output {
+  font-variant-ligatures: none;
+  font-feature-settings: 'liga' 0, 'clig' 0, 'calt' 0;
+}
+
+/* ── 2. Шапка лекции ──────────────────────────────────────────────────────── */
+.vp-doc .lec-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 0.25rem;
+}
+.vp-doc h1 {
+  background-image: linear-gradient(45deg, var(--brand-2) 10%, var(--brand) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+.vp-doc .lec-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 1rem 0 1.25rem;
+}
+.vp-doc .lec-topics span {
+  font-size: 0.78rem;
+  line-height: 1;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+}
+.vp-doc .lec-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding-bottom: 8px;
+}
+.vp-doc a.lec-btn {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: var(--brand);
+  color: var(--surface);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.vp-doc a.lec-btn:hover { background: var(--brand-2); }
+.vp-doc .lec-hint { font-size: 0.85rem; color: var(--ink-muted); }
+
+/* ── 3. Заголовки: раздел и слайд ─────────────────────────────────────────── */
+.vp-doc h2 { color: var(--ink); }
+.vp-doc h3 { margin-top: 40px; }
+.vp-doc h4 { color: var(--ink-2); font-size: 1em; margin-top: 20px; }
+
+/* «слайд 17» у заголовка: ссылка на это место в презентации */
+.vp-doc .slide-ref {
+  display: inline-block;
+  vertical-align: 0.2em;
+  margin-left: 0.5em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--ink-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-text-fill-color: currentColor;
+}
+.vp-doc .slide-ref::before { content: 'слайд ' attr(data-label); }
+.vp-doc .slide-ref::after { margin-left: 3px; }
+.vp-doc .slide-ref:hover { color: var(--brand); border-color: var(--brand); }
+
+/* ── 4. Текст как на слайдах ──────────────────────────────────────────────── */
+.vp-doc li::marker { color: var(--brand); font-weight: 700; }
+
+.vp-doc blockquote {
+  border-left: 3px solid var(--brand);
+  background: var(--brand-soft);
+  border-radius: 0 8px 8px 0;
+  padding: 0.6em 1em;
+  color: var(--ink);
+}
+.vp-doc blockquote > p { color: var(--ink); font-size: 1em; margin: 0.3em 0; }
+
+.vp-doc .note, .vp-doc .warn, .vp-doc .danger { font-size: 0.95em; border-radius: 0 8px 8px 0; }
+.vp-doc .note p, .vp-doc .warn p, .vp-doc .danger p { margin: 0.35em 0; }
+
+/* ── 5. Вывод программы ───────────────────────────────────────────────────── */
+/* Прилипает к блоку кода над ним и подписан, чтобы код и вывод не путались. */
+.vp-doc .output {
+  position: relative;
+  font-size: 0.85em;
+  line-height: 1.55;
+  color: var(--ink-2);
+  background: transparent;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  padding: 0.55em 0.9em;
+  margin: -8px 0 16px;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  tab-size: 8;
+}
+.vp-doc .output::before {
+  content: 'вывод';
+  display: block;
+  font-family: var(--vp-font-family-base);
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.2em;
+}
+.vp-doc div[class*='language-'] + .output { border-top-left-radius: 0; border-top-right-radius: 0; }
+@media (max-width: 639px) {           /* на телефоне блоки кода во всю ширину — вывод тоже */
+  .vp-doc .output { margin-left: -24px; margin-right: -24px; border-radius: 0 !important;
+                    border-left: none; border-right: none; padding-left: 24px; }
+}
+
+/* ── 6. Ответы на вопросы (бывшие <v-click>) ─────────────────────────────── */
+.vp-doc details.answer {
+  border: 1px solid var(--brand);
+  border-left-width: 3px;
+  background: var(--surface);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 16px;
+  margin: 16px 0;
+}
+.vp-doc details.answer > summary {
+  color: var(--brand);
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0;
+}
+.vp-doc details.answer[open] > summary { margin-bottom: 8px; }
+
+/* ── 7. Колонки ───────────────────────────────────────────────────────────── */
+/* На слайде колонки экономят высоту, в конспекте мешают: колонка шириной
+   в треть экрана обрезает код. Поэтому здесь всё идёт друг под другом. */
+.vp-doc .cols-2, .vp-doc .cols-3 { grid-template-columns: minmax(0, 1fr); gap: 0; }
+.vp-doc .cols-2 > div > :first-child,
+.vp-doc .cols-3 > div > :first-child { margin-top: 16px; }
+
+/* ── 8. Рисунки ───────────────────────────────────────────────────────────── */
+.vp-doc svg { max-width: 100%; height: auto; }
+.vp-doc .center { text-align: center; }
+.vp-doc .center img, .vp-doc .center table { margin-left: auto; margin-right: auto; }
+.vp-doc figure { margin: 16px auto; text-align: center; }
+.vp-doc figcaption { font-size: 0.85em; font-style: italic; color: var(--ink-2); }
+
+/* Текст только для конспекта: <div class="konspekt">…</div> в slides.md.
+   На слайдах он скрыт правилом в shared/style.css. */
+.vp-doc .konspekt { display: block; }

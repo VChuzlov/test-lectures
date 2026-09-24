@@ -1,0 +1,191 @@
+/* Локальный style.css лекции.
+   Всё общее лежит в shared/style.css — здесь только то, что специфично
+   для этой лекции. Так тема правится в одном месте на весь курс. */
+
+@import '../../shared/style.css';
+
+/* Фоны титульного слайда.
+   Путь обязан быть написан ЗДЕСЬ, в css внутри папки лекции: тогда это
+   обычный для Vite случай — он сам подставит хеш и базовый URL при сборке.
+   Файлы кладёт tools/build_site.py из shared/pics/, вручную копировать не
+   нужно. Шторка и классы cover-bg / cover-body — в shared/style.css, раздел 5. */
+.cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-light.jpg');
+}
+
+html.dark .cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-dark.jpg');
+}
+
+
+/* ── Вывод программы ─────────────────────────────────────────────────────────
+   Табуляция в выводе -- как в консоли Python, через 8 позиций.              */
+.output { tab-size: 8; }
+
+
+/* ── Таблица индексов (слайд «Операции индексации») ─────────────────────────
+   <div class="seq"><table>
+     <tr class="pos">…положительные индексы…</tr>
+     <tr class="chr">…символы строки…</tr>
+     <tr class="neg">…отрицательные индексы…</tr>
+   </table></div>                                                            */
+.seq {
+  display: flex;
+  justify-content: center;
+}
+.slidev-layout .seq table {
+  width: auto !important;   /* иначе таблица растягивается на всю ширину */
+  margin: 0.8em 0 0;
+  border-collapse: separate;
+  border-spacing: 6px 4px;
+}
+.slidev-layout .seq th,
+.slidev-layout .seq td {
+  border: none;
+  padding: 2px 0;
+  text-align: center;
+}
+.slidev-layout .seq th {
+  padding-right: 14px;
+  text-align: right;
+  font-weight: 400;
+  color: var(--ink-2);
+}
+.slidev-layout .seq td {
+  width: 3.2rem;
+  font-family: var(--code-font);
+  font-weight: 600;
+}
+.slidev-layout .seq tr.chr td {
+  padding: 8px 0;
+  font-size: 1.6em;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 2px solid var(--brand);
+  border-radius: 8px;
+}
+.slidev-layout .seq tr.pos td { color: var(--brand); }
+.slidev-layout .seq tr.neg td { color: var(--accent-warn); }
+
+
+/* ── Срез как разрез (слайд «Срез как разрез строки») ───────────────────────
+   Ячейки .cell с номером границы <i> слева; у последней ячейки ещё
+   <i class="end">. .g1 / .g2 -- две части строки, .lbl -- подписи под ними,
+   .span3 / .span4 -- сколько ячеек занимает подпись.
+   Однобуквенные имена классов (a, b, c) не годятся: UnoCSS считает, например,
+   класс «b» сокращением для border и рисует рамку.                          */
+.cut {
+  display: grid;
+  grid-template-columns: repeat(7, 3.2rem);
+  justify-content: center;
+  row-gap: 0.45rem;
+  margin: 2.1rem auto 0.6rem;
+}
+.cut .cell {
+  position: relative;
+  height: 3.2rem;
+  display: grid;
+  place-items: center;
+  font-family: var(--code-font);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--ink);
+  border: 2px solid var(--line);
+  margin-left: -2px;
+}
+.cut .cell.g1 { background: var(--brand-soft);       border-color: var(--brand); }
+.cut .cell.g2 { background: var(--accent-warn-soft); border-color: var(--accent-warn); }
+.cut .cell i {
+  position: absolute;
+  top: -1.75rem;
+  left: -1px;
+  transform: translateX(-50%);
+  font-style: normal;
+  font-size: 0.95rem;
+  color: var(--ink-2);
+}
+.cut .cell i.end { left: calc(100% + 1px); }
+.cut .lbl {
+  margin: 0 0.35rem;
+  padding-top: 0.2rem;
+  border-top: 2px solid;
+  text-align: center;
+  font-family: var(--code-font);
+  font-size: 0.95rem;
+}
+.cut .lbl.g1 { color: var(--brand);       border-color: var(--brand); }
+.cut .lbl.g2 { color: var(--accent-warn); border-color: var(--accent-warn); }
+.cut .span3 { grid-column: span 3; }
+.cut .span4 { grid-column: span 4; }
+
+
+/* ── Табуляция по позициям (слайд «Табуляция») ──────────────────────────────
+   Верхняя строка <b> -- номера позиций, .stop -- позиции табуляции (0, 8, 16).
+   Каждая строка вывода начинается с элемента .nl. Символ табуляции -- .t,
+   ширина в позициях задаётся классом .sp3 / .sp7 / .sp8.
+   Пунктирные линии на позициях 8 и 16 рисуют ::before и ::after.           */
+.tabs {
+  --pos: 1.55rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(20, var(--pos));
+  grid-auto-rows: 1.85rem;
+  gap: 3px 0;
+  width: max-content;
+  margin: 0.5rem auto 0.4rem;
+  font-family: var(--code-font);
+}
+.tabs::before,
+.tabs::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 2px dashed var(--accent-warn);
+}
+.tabs::before { left: calc(8 * var(--pos)); }
+.tabs::after  { left: calc(16 * var(--pos)); }
+.tabs b {
+  align-self: end;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+.tabs b.stop { color: var(--accent-warn); font-weight: 700; }
+.tabs span {
+  display: grid;
+  place-items: center;
+  font-size: 1.05rem;
+  color: var(--ink);
+  background: var(--surface-2);
+  border-right: 1px solid var(--surface);
+}
+.tabs .nl { grid-column-start: 1; }
+.tabs .t {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.35rem;
+  color: var(--brand);
+  background: var(--brand-soft);
+}
+.tabs .t em { font-style: normal; font-size: 0.8rem; }
+.tabs .sp3 { grid-column-end: span 3; }
+.tabs .sp7 { grid-column-end: span 7; }
+.tabs .sp8 { grid-column-end: span 8; }
+
+
+/* ── Имена и объекты (слайд «Что значит неизменяемая») ─────────────────────
+   Цвета в SVG берутся из токенов темы, поэтому схема работает в обеих темах. */
+.imm { max-width: 100%; height: auto; }
+.imm .imm-name { fill: var(--surface-2); stroke: var(--ink-2); stroke-width: 1.5; }
+.imm .imm-obj  { fill: var(--brand-soft); stroke: var(--brand); stroke-width: 2; }
+.imm .imm-new  { fill: var(--accent-warn-soft); stroke: var(--accent-warn); stroke-width: 2; }
+.imm .imm-t    { fill: var(--ink); font-family: var(--code-font); font-size: 17px; text-anchor: middle; }
+.imm .imm-cap  { fill: var(--ink-2); font-family: var(--code-font); font-size: 14px; }
+.imm .imm-lbl  { fill: var(--ink-muted); font-size: 13px; }
+.imm .imm-arrow { stroke: var(--ink-2); stroke-width: 2; fill: none; }
+.imm .imm-gone  { stroke-dasharray: 6 5; opacity: 0.4; }
+.imm .imm-headpath { fill: var(--ink-2); }
+.imm .imm-sep  { stroke: var(--line); stroke-width: 1; }

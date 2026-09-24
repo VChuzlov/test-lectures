@@ -1,0 +1,16 @@
+{
+  "name": "konspekty",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "notes": "python ../tools/slides2notes.py",
+    "dev": "npm run notes && vitepress dev",
+    "build": "npm run notes && vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "unocss": "^66.10.5",
+    "vitepress": "^1.6.4"
+  }
+}
