@@ -1,0 +1,110 @@
+/* Локальный style.css лекции.
+   Всё общее лежит в shared/style.css — здесь только то, что специфично
+   для этой лекции. Так тема правится в одном месте на весь курс. */
+
+@import '../../shared/style.css';
+
+/* Фоны титульного слайда.
+   Путь обязан быть написан ЗДЕСЬ, в css внутри папки лекции: тогда это
+   обычный для Vite случай — он сам подставит хеш и базовый URL при сборке.
+   Файлы кладёт tools/build_site.py из shared/pics/, вручную копировать не
+   нужно. Шторка и классы cover-bg / cover-body — в shared/style.css, раздел 5. */
+.cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-light.jpg');
+}
+
+html.dark .cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-dark.jpg');
+}
+
+
+/* ── Вывод программы ─────────────────────────────────────────────────────────
+   Табуляция в выводе -- как в консоли Python, через 8 позиций.              */
+.output { tab-size: 8; }
+
+
+/* ── Серия взвешиваний (слайд «Восемь взвешиваний одной навески») ──────────
+   <div class="weights"><span>2,512</span><span>2,508</span>…</div>           */
+.weights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 0.65rem;
+  margin: 0.8rem 0 0.4rem;
+  font-family: var(--code-font);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.weights span {
+  padding: 0.2rem 0.6rem;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 2px solid var(--brand);
+  border-radius: 8px;
+}
+
+
+/* ── Таблица индексов (слайд «Индексация списков») ──────────────────────────
+   Та же схема, что в лекции 4 для строки:
+   <div class="seq wide"><table>
+     <tr class="pos">…положительные индексы…</tr>
+     <tr class="chr">…элементы списка…</tr>
+     <tr class="neg">…отрицательные индексы…</tr>
+   </table></div>
+   Модификатор .wide расширяет ячейки: элемент списка длиннее одного символа. */
+.seq {
+  display: flex;
+  justify-content: center;
+}
+.slidev-layout .seq table {
+  width: auto !important;   /* иначе таблица растягивается на всю ширину */
+  margin: 0.8em 0 0;
+  border-collapse: separate;
+  border-spacing: 6px 4px;
+}
+.slidev-layout .seq th,
+.slidev-layout .seq td {
+  border: none;
+  padding: 2px 0;
+  text-align: center;
+}
+.slidev-layout .seq th {
+  padding-right: 14px;
+  text-align: right;
+  font-weight: 400;
+  color: var(--ink-2);
+}
+.slidev-layout .seq td {
+  width: 3.2rem;
+  font-family: var(--code-font);
+  font-weight: 600;
+}
+.slidev-layout .seq tr.chr td {
+  padding: 8px 0;
+  font-size: 1.6em;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 2px solid var(--brand);
+  border-radius: 8px;
+}
+.slidev-layout .seq tr.pos td { color: var(--brand); }
+.slidev-layout .seq tr.neg td { color: var(--accent-warn); }
+
+.slidev-layout .seq.wide td { width: 4.6rem; }
+.slidev-layout .seq.wide tr.chr td { font-size: 1.3em; }
+
+
+/* ── Имена и объекты (слайд «Два имени, один список») ──────────────────────
+   Схема нарисована SVG прямо в слайде, классы те же, что в лекции 4.
+   Цвета берутся из токенов темы, поэтому схема работает в обеих темах.     */
+.imm { max-width: 100%; height: auto; }
+.imm .imm-name { fill: var(--surface-2); stroke: var(--ink-2); stroke-width: 1.5; }
+.imm .imm-obj  { fill: var(--brand-soft); stroke: var(--brand); stroke-width: 2; }
+.imm .imm-new  { fill: var(--accent-warn-soft); stroke: var(--accent-warn); stroke-width: 2; }
+.imm .imm-t    { fill: var(--ink); font-family: var(--code-font); font-size: 17px; text-anchor: middle; }
+.imm .imm-cap  { fill: var(--ink-2); font-family: var(--code-font); font-size: 14px; }
+.imm .imm-lbl  { fill: var(--ink-muted); font-size: 13px; }
+.imm .imm-arrow { stroke: var(--ink-2); stroke-width: 2; fill: none; }
+.imm .imm-gone  { stroke-dasharray: 6 5; opacity: 0.4; }
+.imm .imm-headpath { fill: var(--ink-2); }
+.imm .imm-sep  { stroke: var(--line); stroke-width: 1; }

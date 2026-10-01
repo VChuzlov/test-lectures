@@ -1,0 +1,359 @@
+<!-- Сгенерировано figtheme.save_adaptive('pics/tiobe') — не редактировать вручную -->
+<template>
+<svg stroke-linejoin="round" stroke-linecap="butt" viewBox="0 0 394.376174 384.433551" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <g id="tiobe-figure_1">
+  <g id="tiobe-patch_1">
+   <path d="M 0 384.433551 
+L 394.376174 384.433551 
+L 394.376174 0 
+L 0 0 
+L 0 384.433551 
+z
+" style="fill: none"/>
+  </g>
+  <g id="tiobe-axes_1">
+   <g id="tiobe-patch_2">
+    <path d="M 85.605625 342.233551 
+L 372.19517 342.233551 
+L 372.19517 7.2 
+L 85.605625 7.2 
+L 85.605625 342.233551 
+z
+" style="fill: none"/>
+   </g>
+   <g id="tiobe-patch_3">
+    <path d="M 85.605625 10.550336 
+L 358.548049 10.550336 
+L 358.548049 37.35302 
+L 85.605625 37.35302 
+z
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: var(--s1)"/>
+   </g>
+   <g id="tiobe-patch_4">
+    <path d="M 85.605625 44.053691 
+L 249.105944 44.053691 
+L 249.105944 70.856375 
+L 85.605625 70.856375 
+z
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: var(--s1)"/>
+   </g>
+   <g id="tiobe-patch_5">
+    <path d="M 85.605625 77.557046 
+L 212.576143 77.557046 
+L 212.576143 104.35973 
+L 85.605625 104.35973 
+z
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: var(--s1)"/>
+   </g>
+   <g id="tiobe-patch_6">
+    <path d="M 85.605625 111.060401 
+L 207.126132 111.060401 
+L 207.126132 137.863085 
+L 85.605625 137.863085 
+z
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: var(--s1)"/>
+   </g>
+   <g id="tiobe-patch_7">
+    <path d="M 85.605625 144.563756 
+L 145.850337 144.563756 
+L 145.850337 171.36644 
+L 85.605625 171.36644 
+z
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: var(--s1)"/>
+   </g>
+   <g id="tiobe-patch_8">
+    <path d="M 85.605625 178.067111 
+L 124.34489 178.067111 
+L 124.34489 204.869795 
+L 85.605625 204.869795 
+z
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: var(--s1)"/>
+   </g>
+   <g id="tiobe-patch_9">
+    <path d="M 85.605625 211.570466 
+L 117.716498 211.570466 
+L 117.716498 238.37315 
+L 85.605625 238.37315 
+z
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: var(--s1)"/>
+   </g>
+   <g id="tiobe-patch_10">
+    <path d="M 85.605625 245.073821 
+L 113.297571 245.073821 
+L 113.297571 271.876505 
+L 85.605625 271.876505 
+z
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: var(--s1)"/>
+   </g>
+   <g id="tiobe-patch_11">
+    <path d="M 85.605625 278.577176 
+L 108.584048 278.577176 
+L 108.584048 305.379861 
+L 85.605625 305.379861 
+z
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: var(--s1)"/>
+   </g>
+   <g id="tiobe-patch_12">
+    <path d="M 85.605625 312.080532 
+L 106.963775 312.080532 
+L 106.963775 338.883216 
+L 85.605625 338.883216 
+z
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: var(--s1)"/>
+   </g>
+   <g id="tiobe-matplotlib.axis_1">
+    <g id="tiobe-xtick_1">
+     <g id="tiobe-line2d_1">
+      <path d="M 85.605625 342.233551 
+L 85.605625 7.2 
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="tiobe-line2d_2">
+      <defs>
+       <path id="tiobe-m529a058028" d="M 0 0 
+L 0 3.5 
+" style="stroke: currentColor; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use href="#tiobe-m529a058028" x="85.605625" y="342.233551" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_1">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: currentColor" x="85.605625" y="358.350739" transform="rotate(-0 85.605625 358.350739)">0</text>
+     </g>
+    </g>
+    <g id="tiobe-xtick_2">
+     <g id="tiobe-line2d_3">
+      <path d="M 159.254417 342.233551 
+L 159.254417 7.2 
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="tiobe-line2d_4">
+      <g>
+       <use href="#tiobe-m529a058028" x="159.254417" y="342.233551" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_2">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: currentColor" x="159.254417" y="358.350739" transform="rotate(-0 159.254417 358.350739)">5</text>
+     </g>
+    </g>
+    <g id="tiobe-xtick_3">
+     <g id="tiobe-line2d_5">
+      <path d="M 232.90321 342.233551 
+L 232.90321 7.2 
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="tiobe-line2d_6">
+      <g>
+       <use href="#tiobe-m529a058028" x="232.90321" y="342.233551" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_3">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: currentColor" x="232.90321" y="358.350739" transform="rotate(-0 232.90321 358.350739)">10</text>
+     </g>
+    </g>
+    <g id="tiobe-xtick_4">
+     <g id="tiobe-line2d_7">
+      <path d="M 306.552002 342.233551 
+L 306.552002 7.2 
+" clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="tiobe-line2d_8">
+      <g>
+       <use href="#tiobe-m529a058028" x="306.552002" y="342.233551" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_4">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: currentColor" x="306.552002" y="358.350739" transform="rotate(-0 306.552002 358.350739)">15</text>
+     </g>
+    </g>
+    <g id="tiobe-text_5">
+     <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: currentColor" x="228.900398" y="374.350739" transform="rotate(-0 228.900398 374.350739)">Рейтинг, %</text>
+    </g>
+   </g>
+   <g id="tiobe-matplotlib.axis_2">
+    <g id="tiobe-ytick_1">
+     <g id="tiobe-line2d_9">
+      <defs>
+       <path id="tiobe-m9da37f385b" d="M 0 0 
+L -3.5 0 
+" style="stroke: currentColor; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use href="#tiobe-m9da37f385b" x="85.605625" y="23.951678" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_6">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: currentColor" x="78.605625" y="28.51074" transform="rotate(-0 78.605625 28.51074)">Python</text>
+     </g>
+    </g>
+    <g id="tiobe-ytick_2">
+     <g id="tiobe-line2d_10">
+      <g>
+       <use href="#tiobe-m9da37f385b" x="85.605625" y="57.455033" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_7">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: currentColor" x="78.605625" y="62.013626" transform="rotate(-0 78.605625 62.013626)">C</text>
+     </g>
+    </g>
+    <g id="tiobe-ytick_3">
+     <g id="tiobe-line2d_11">
+      <g>
+       <use href="#tiobe-m9da37f385b" x="85.605625" y="90.958388" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_8">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: currentColor" x="78.605625" y="95.516982" transform="rotate(-0 78.605625 95.516982)">C++</text>
+     </g>
+    </g>
+    <g id="tiobe-ytick_4">
+     <g id="tiobe-line2d_12">
+      <g>
+       <use href="#tiobe-m9da37f385b" x="85.605625" y="124.461743" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_9">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: currentColor" x="78.605625" y="129.020337" transform="rotate(-0 78.605625 129.020337)">Java</text>
+     </g>
+    </g>
+    <g id="tiobe-ytick_5">
+     <g id="tiobe-line2d_13">
+      <g>
+       <use href="#tiobe-m9da37f385b" x="85.605625" y="157.965098" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_10">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: currentColor" x="78.605625" y="162.523692" transform="rotate(-0 78.605625 162.523692)">C#</text>
+     </g>
+    </g>
+    <g id="tiobe-ytick_6">
+     <g id="tiobe-line2d_14">
+      <g>
+       <use href="#tiobe-m9da37f385b" x="85.605625" y="191.468453" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_11">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: currentColor" x="78.605625" y="196.027516" transform="rotate(-0 78.605625 196.027516)">JavaScript</text>
+     </g>
+    </g>
+    <g id="tiobe-ytick_7">
+     <g id="tiobe-line2d_15">
+      <g>
+       <use href="#tiobe-m9da37f385b" x="85.605625" y="224.971808" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_12">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: currentColor" x="78.605625" y="229.530871" transform="rotate(-0 78.605625 229.530871)">Visual Basic</text>
+     </g>
+    </g>
+    <g id="tiobe-ytick_8">
+     <g id="tiobe-line2d_16">
+      <g>
+       <use href="#tiobe-m9da37f385b" x="85.605625" y="258.475163" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_13">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: currentColor" x="78.605625" y="263.033757" transform="rotate(-0 78.605625 263.033757)">SQL</text>
+     </g>
+    </g>
+    <g id="tiobe-ytick_9">
+     <g id="tiobe-line2d_17">
+      <g>
+       <use href="#tiobe-m9da37f385b" x="85.605625" y="291.978518" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_14">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: currentColor" x="78.605625" y="296.537112" transform="rotate(-0 78.605625 296.537112)">R</text>
+     </g>
+    </g>
+    <g id="tiobe-ytick_10">
+     <g id="tiobe-line2d_18">
+      <g>
+       <use href="#tiobe-m9da37f385b" x="85.605625" y="325.481874" style="fill: currentColor; stroke: currentColor; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="tiobe-text_15">
+      <text style="font-size: 12px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: currentColor" x="78.605625" y="330.040467" transform="rotate(-0 78.605625 330.040467)">Rust</text>
+     </g>
+    </g>
+   </g>
+   <g id="tiobe-line2d_19">
+    <path clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-line2d_20">
+    <path clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-line2d_21">
+    <path clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-line2d_22">
+    <path clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-line2d_23">
+    <path clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-line2d_24">
+    <path clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-line2d_25">
+    <path clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-line2d_26">
+    <path clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-line2d_27">
+    <path clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-line2d_28">
+    <path clip-path="url(#tiobe-pd03794e4df)" style="fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-patch_13">
+    <path d="M 85.605625 342.233551 
+L 85.605625 7.2 
+" style="fill: none; stroke: currentColor; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-patch_14">
+    <path d="M 85.605625 342.233551 
+L 372.19517 342.233551 
+" style="fill: none; stroke: currentColor; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="tiobe-text_16">
+    <text style="font-size: 10px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: currentColor" x="358.548049" y="26.549334" transform="rotate(-0 358.548049 26.549334)">18.53</text>
+   </g>
+   <g id="tiobe-text_17">
+    <text style="font-size: 10px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: currentColor" x="249.105944" y="60.052689" transform="rotate(-0 249.105944 60.052689)">11.1</text>
+   </g>
+   <g id="tiobe-text_18">
+    <text style="font-size: 10px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: currentColor" x="212.576143" y="93.556044" transform="rotate(-0 212.576143 93.556044)">8.62</text>
+   </g>
+   <g id="tiobe-text_19">
+    <text style="font-size: 10px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: currentColor" x="207.126132" y="127.059399" transform="rotate(-0 207.126132 127.059399)">8.25</text>
+   </g>
+   <g id="tiobe-text_20">
+    <text style="font-size: 10px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: currentColor" x="145.850337" y="160.562754" transform="rotate(-0 145.850337 160.562754)">4.09</text>
+   </g>
+   <g id="tiobe-text_21">
+    <text style="font-size: 10px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: currentColor" x="124.34489" y="194.066109" transform="rotate(-0 124.34489 194.066109)">2.63</text>
+   </g>
+   <g id="tiobe-text_22">
+    <text style="font-size: 10px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: currentColor" x="117.716498" y="227.569464" transform="rotate(-0 117.716498 227.569464)">2.18</text>
+   </g>
+   <g id="tiobe-text_23">
+    <text style="font-size: 10px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: currentColor" x="113.297571" y="261.07282" transform="rotate(-0 113.297571 261.07282)">1.88</text>
+   </g>
+   <g id="tiobe-text_24">
+    <text style="font-size: 10px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: currentColor" x="108.584048" y="294.576175" transform="rotate(-0 108.584048 294.576175)">1.56</text>
+   </g>
+   <g id="tiobe-text_25">
+    <text style="font-size: 10px; font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: currentColor" x="106.963775" y="328.07953" transform="rotate(-0 106.963775 328.07953)">1.45</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="tiobe-pd03794e4df">
+   <rect x="85.605625" y="7.2" width="286.589545" height="335.033551"/>
+  </clipPath>
+ </defs>
+</svg>
+</template>

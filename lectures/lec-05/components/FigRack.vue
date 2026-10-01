@@ -1,0 +1,86 @@
+<!-- Сгенерировано make_rack.py: не редактировать вручную -->
+<template>
+<svg viewBox="0 0 876 340" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="280" cy="308" rx="215" ry="8" fill="#1a1a19" opacity="0.07"/>
+  <!-- хвост -->
+  <path d="M 728 268 c 30 14 48 -4 36 -22 c -8 -11 -22 -8 -24 2" fill="none" stroke="var(--s3)" stroke-width="15" stroke-linecap="round"/>
+  <path d="M 728 268 C 660 318, 566 296, 528 226 C 494 164, 430 84, 338 94" fill="none" stroke="var(--s3)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="684.7" cy="289.6" r="4.2" fill="var(--s6)" opacity="0.3"/>
+  <circle cx="621.2" cy="292.9" r="4.2" fill="var(--s6)" opacity="0.3"/>
+  <circle cx="563.9" cy="267.8" r="4.2" fill="var(--s6)" opacity="0.3"/>
+  <circle cx="504.0" cy="187.5" r="4.2" fill="var(--s6)" opacity="0.3"/>
+  <circle cx="458.5" cy="136.2" r="4.2" fill="var(--s6)" opacity="0.3"/>
+  <circle cx="399.4" cy="100.9" r="4.2" fill="var(--s6)" opacity="0.3"/>
+  <!-- штатив -->
+  <rect x="86" y="160" width="9" height="130" fill="currentColor" opacity="0.32"/>
+  <rect x="465" y="160" width="9" height="130" fill="currentColor" opacity="0.32"/>
+  <rect x="80" y="290" width="400" height="16" rx="4" fill="currentColor" opacity="0.42"/>
+  <rect x="80" y="160" width="400" height="18" rx="4" fill="currentColor" opacity="0.42"/>
+  <ellipse cx="120" cy="169" rx="19" ry="5" fill="var(--surface, #fcfcfb)" opacity="0.9"/>
+  <ellipse cx="200" cy="169" rx="19" ry="5" fill="var(--surface, #fcfcfb)" opacity="0.9"/>
+  <ellipse cx="280" cy="169" rx="19" ry="5" fill="var(--surface, #fcfcfb)" opacity="0.9"/>
+  <ellipse cx="360" cy="169" rx="19" ry="5" fill="var(--surface, #fcfcfb)" opacity="0.9"/>
+  <ellipse cx="440" cy="169" rx="19" ry="5" fill="var(--surface, #fcfcfb)" opacity="0.9"/>
+  <!-- пробирки -->
+  <path d="M 105 112 L 105 255 A 15 15 0 0 0 135 255 L 135 112 Z" fill="currentColor" opacity="0.05"/>
+  <path d="M 105 200 q 7.5 -6 15 0 t 15 0 L 135 255 A 15 15 0 0 1 105 255 Z" fill="var(--s1)" opacity="0.45"/>
+  <path d="M 105 200 q 7.5 -6 15 0 t 15 0 L 135 255 A 15 15 0 0 1 105 255 Z" fill="none" stroke="var(--s1)" stroke-width="2" opacity="0.6"/>
+  <path d="M 105 112 L 105 255 A 15 15 0 0 0 135 255 L 135 112 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" opacity="0.5"/>
+  <rect x="101" y="106" width="38" height="8" rx="4" fill="currentColor" opacity="0.38"/>
+  <path d="M 112 134 L 112 225" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.14"/>
+  <path d="M 185 112 L 185 255 A 15 15 0 0 0 215 255 L 215 112 Z" fill="currentColor" opacity="0.05"/>
+  <path d="M 185 200 q 7.5 -6 15 0 t 15 0 L 215 255 A 15 15 0 0 1 185 255 Z" fill="var(--s2)" opacity="0.45"/>
+  <path d="M 185 200 q 7.5 -6 15 0 t 15 0 L 215 255 A 15 15 0 0 1 185 255 Z" fill="none" stroke="var(--s2)" stroke-width="2" opacity="0.6"/>
+  <path d="M 185 112 L 185 255 A 15 15 0 0 0 215 255 L 215 112 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" opacity="0.5"/>
+  <rect x="181" y="106" width="38" height="8" rx="4" fill="currentColor" opacity="0.38"/>
+  <path d="M 192 134 L 192 225" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.14"/>
+  <path d="M 265 112 L 265 255 A 15 15 0 0 0 295 255 L 295 112 Z" fill="currentColor" opacity="0.05"/>
+  <path d="M 265 200 q 7.5 -6 15 0 t 15 0 L 295 255 A 15 15 0 0 1 265 255 Z" fill="var(--s4)" opacity="0.45"/>
+  <path d="M 265 200 q 7.5 -6 15 0 t 15 0 L 295 255 A 15 15 0 0 1 265 255 Z" fill="none" stroke="var(--s4)" stroke-width="2" opacity="0.6"/>
+  <path d="M 265 112 L 265 255 A 15 15 0 0 0 295 255 L 295 112 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" opacity="0.5"/>
+  <rect x="261" y="106" width="38" height="8" rx="4" fill="currentColor" opacity="0.38"/>
+  <path d="M 272 134 L 272 225" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.14"/>
+  <path d="M 425 112 L 425 255 A 15 15 0 0 0 455 255 L 455 112 Z" fill="currentColor" opacity="0.05"/>
+  <path d="M 425 200 q 7.5 -6 15 0 t 15 0 L 455 255 A 15 15 0 0 1 425 255 Z" fill="var(--s5)" opacity="0.45"/>
+  <path d="M 425 200 q 7.5 -6 15 0 t 15 0 L 455 255 A 15 15 0 0 1 425 255 Z" fill="none" stroke="var(--s5)" stroke-width="2" opacity="0.6"/>
+  <path d="M 425 112 L 425 255 A 15 15 0 0 0 455 255 L 455 112 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" opacity="0.5"/>
+  <rect x="421" y="106" width="38" height="8" rx="4" fill="currentColor" opacity="0.38"/>
+  <path d="M 432 134 L 432 225" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.14"/>
+  <!-- индексы -->
+  <path transform="translate(114.8 334.0)" d="M 5.2 -8.1 Q 5.2 -8.6 5.6 -9.1 Q 6.0 -9.5 6.6 -9.5 Q 7.2 -9.5 7.6 -9.1 Q 8.1 -8.6 8.1 -8.1 Q 8.1 -7.5 7.6 -7.0 Q 7.2 -6.6 6.6 -6.6 Q 6.0 -6.6 5.6 -7.0 Q 5.2 -7.4 5.2 -8.1 Z M 6.6 -14.6 Q 5.1 -14.6 4.4 -13.0 Q 3.6 -11.3 3.6 -8.0 Q 3.6 -4.7 4.4 -3.0 Q 5.1 -1.4 6.6 -1.4 Q 8.1 -1.4 8.9 -3.0 Q 9.6 -4.7 9.6 -8.0 Q 9.6 -11.3 8.9 -13.0 Q 8.1 -14.6 6.6 -14.6 Z M 6.6 -16.3 Q 9.2 -16.3 10.5 -14.2 Q 11.8 -12.1 11.8 -8.0 Q 11.8 -3.9 10.5 -1.8 Q 9.2 0.3 6.6 0.3 Q 4.0 0.3 2.7 -1.8 Q 1.4 -3.9 1.4 -8.0 Q 1.4 -12.1 2.7 -14.2 Q 4.0 -16.3 6.6 -16.3 Z" fill="currentColor" opacity="0.75"/>
+  <path transform="translate(195.4 334.0)" d="M 2.9 -1.8 L 6.3 -1.8 L 6.3 -14.1 L 2.6 -13.3 L 2.6 -15.2 L 6.3 -16.0 L 8.4 -16.0 L 8.4 -1.8 L 11.8 -1.8 L 11.8 -0.0 L 2.9 -0.0 L 2.9 -1.8 Z" fill="currentColor" opacity="0.75"/>
+  <path transform="translate(275.1 334.0)" d="M 4.0 -1.8 L 11.4 -1.8 L 11.4 -0.0 L 1.6 -0.0 L 1.6 -1.8 Q 3.6 -3.9 5.1 -5.6 Q 6.6 -7.2 7.2 -7.9 Q 8.3 -9.2 8.7 -10.0 Q 9.0 -10.8 9.0 -11.6 Q 9.0 -13.0 8.3 -13.7 Q 7.5 -14.5 6.1 -14.5 Q 5.1 -14.5 4.0 -14.1 Q 3.0 -13.8 1.8 -13.1 L 1.8 -15.3 Q 2.9 -15.8 3.9 -16.1 Q 5.0 -16.3 6.0 -16.3 Q 8.4 -16.3 9.8 -15.1 Q 11.3 -13.8 11.3 -11.8 Q 11.3 -10.8 10.8 -9.7 Q 10.3 -8.7 9.2 -7.5 Q 8.6 -6.8 7.5 -5.5 Q 6.3 -4.3 4.0 -1.8 Z" fill="currentColor" opacity="0.75"/>
+  <path transform="translate(354.9 334.0)" d="M 8.3 -8.6 Q 9.9 -8.2 10.8 -7.1 Q 11.6 -6.0 11.6 -4.4 Q 11.6 -2.2 10.1 -0.9 Q 8.6 0.3 6.0 0.3 Q 4.9 0.3 3.7 0.1 Q 2.6 -0.1 1.5 -0.5 L 1.5 -2.6 Q 2.6 -2.1 3.6 -1.8 Q 4.7 -1.5 5.7 -1.5 Q 7.5 -1.5 8.5 -2.3 Q 9.4 -3.1 9.4 -4.6 Q 9.4 -6.0 8.5 -6.9 Q 7.5 -7.7 5.9 -7.7 L 4.2 -7.7 L 4.2 -9.5 L 5.9 -9.5 Q 7.4 -9.5 8.2 -10.1 Q 9.1 -10.8 9.1 -11.9 Q 9.1 -13.2 8.3 -13.8 Q 7.5 -14.5 6.1 -14.5 Q 5.1 -14.5 4.1 -14.3 Q 3.1 -14.1 2.0 -13.6 L 2.0 -15.6 Q 3.3 -16.0 4.3 -16.2 Q 5.3 -16.3 6.1 -16.3 Q 8.4 -16.3 9.8 -15.2 Q 11.2 -14.0 11.2 -12.0 Q 11.2 -10.7 10.5 -9.8 Q 9.7 -8.9 8.3 -8.6 Z" fill="currentColor" opacity="0.75"/>
+  <path transform="translate(434.5 334.0)" d="M 7.9 -14.1 L 2.8 -5.6 L 7.9 -5.6 L 7.9 -14.1 Z M 7.5 -16.0 L 10.1 -16.0 L 10.1 -5.6 L 12.2 -5.6 L 12.2 -3.8 L 10.1 -3.8 L 10.1 -0.0 L 7.9 -0.0 L 7.9 -3.8 L 1.1 -3.8 L 1.1 -5.9 L 7.5 -16.0 Z" fill="currentColor" opacity="0.75"/>
+  <!-- пробирка над гнездом 3 -->
+  <path d="M 345 20 L 345 163 A 15 15 0 0 0 375 163 L 375 20 Z" fill="currentColor" opacity="0.05"/>
+  <path d="M 345 108 q 7.5 -6 15 0 t 15 0 L 375 163 A 15 15 0 0 1 345 163 Z" fill="var(--s7)" opacity="0.45"/>
+  <path d="M 345 108 q 7.5 -6 15 0 t 15 0 L 375 163 A 15 15 0 0 1 345 163 Z" fill="none" stroke="var(--s7)" stroke-width="2" opacity="0.6"/>
+  <path d="M 345 20 L 345 163 A 15 15 0 0 0 375 163 L 375 20 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" opacity="0.5"/>
+  <rect x="341" y="14" width="38" height="8" rx="4" fill="currentColor" opacity="0.38"/>
+  <path d="M 352 42 L 352 133" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.14"/>
+  <!-- виток вокруг пробирки -->
+  <path d="M 338 94 C 312 116, 348 140, 392 124 C 432 110, 452 82, 482 62" fill="none" stroke="var(--s3)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="329.9" cy="113.2" r="4.2" fill="var(--s6)" opacity="0.3"/>
+  <circle cx="350.1" cy="127.7" r="4.2" fill="var(--s6)" opacity="0.3"/>
+  <circle cx="423.4" cy="108.2" r="4.2" fill="var(--s6)" opacity="0.3"/>
+  <circle cx="453.7" cy="84.3" r="4.2" fill="var(--s6)" opacity="0.3"/>
+  <!-- голова -->
+  <ellipse cx="512" cy="44" rx="37" ry="29" fill="var(--s3)" transform="rotate(-12 512 44)"/>
+  <ellipse cx="500" cy="35" rx="9" ry="10" fill="#fdfdfb"/>
+  <ellipse cx="529" cy="39" rx="9" ry="10" fill="#fdfdfb"/>
+  <circle cx="502.5" cy="36.5" r="4.6" fill="#17301f"/>
+  <circle cx="531.5" cy="40.5" r="4.6" fill="#17301f"/>
+  <circle cx="504" cy="34" r="1.7" fill="#fdfdfb"/>
+  <circle cx="533" cy="38" r="1.7" fill="#fdfdfb"/>
+  <circle cx="511" cy="53" r="1.8" fill="#17301f" opacity="0.55"/>
+  <circle cx="521" cy="54.5" r="1.8" fill="#17301f" opacity="0.55"/>
+  <path d="M 508 62 q 9 7 18 1" fill="none" stroke="#17301f" stroke-width="2.4" stroke-linecap="round" opacity="0.55"/>
+  <path d="M 527 68 C 544 84, 566 82, 578 72" fill="none" stroke="var(--s8)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 578 72 l 15 -3 M 578 72 l 10 10" fill="none" stroke="var(--s8)" stroke-width="4" stroke-linecap="round"/>
+  <!-- реплика -->
+  <path d="M 630 28 l -24 16 l 24 12 Z" fill="var(--surface, #fcfcfb)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity="0.9"/>
+  <rect x="628" y="8" width="233" height="71" rx="16" fill="var(--surface, #fcfcfb)" stroke="currentColor" stroke-width="2" opacity="0.9"/>
+  <path transform="translate(654.0 35.8)" d="M 5.1 -1.9 L 5.1 5.8 L 2.6 5.8 L 2.6 -15.3 L 5.1 -15.3 L 5.1 -13.4 Q 5.8 -14.5 6.8 -15.1 Q 7.8 -15.7 9.2 -15.7 Q 12.0 -15.7 13.6 -13.5 Q 15.2 -11.4 15.2 -7.6 Q 15.2 -3.9 13.6 -1.7 Q 12.0 0.4 9.2 0.4 Q 7.8 0.4 6.8 -0.2 Q 5.7 -0.8 5.1 -1.9 Z M 12.5 -7.6 Q 12.5 -10.6 11.6 -12.1 Q 10.7 -13.5 8.8 -13.5 Q 7.0 -13.5 6.1 -12.1 Q 5.1 -10.6 5.1 -7.6 Q 5.1 -4.7 6.1 -3.2 Q 7.0 -1.7 8.8 -1.7 Q 10.7 -1.7 11.6 -3.2 Q 12.5 -4.7 12.5 -7.6 Z M 31.2 -9.5 L 31.2 -0.0 L 28.7 -0.0 L 28.7 -9.5 Q 28.7 -11.6 28.0 -12.5 Q 27.2 -13.5 25.7 -13.5 Q 23.9 -13.5 23.0 -12.2 Q 22.0 -11.0 22.0 -8.7 L 22.0 -0.0 L 19.5 -0.0 L 19.5 -21.3 L 22.0 -21.3 L 22.0 -13.0 Q 22.7 -14.3 23.9 -15.0 Q 25.0 -15.7 26.6 -15.7 Q 28.9 -15.7 30.1 -14.1 Q 31.2 -12.6 31.2 -9.5 Z M 40.0 -21.3 L 45.8 -21.3 L 45.8 -19.3 L 42.6 -19.3 L 42.6 1.7 L 45.8 1.7 L 45.8 3.7 L 40.0 3.7 L 40.0 -21.3 Z M 61.2 -10.9 Q 63.2 -10.4 64.3 -9.0 Q 65.3 -7.7 65.3 -5.6 Q 65.3 -2.8 63.4 -1.2 Q 61.5 0.4 58.2 0.4 Q 56.8 0.4 55.3 0.1 Q 53.9 -0.1 52.4 -0.6 L 52.4 -3.4 Q 53.8 -2.6 55.2 -2.3 Q 56.5 -1.9 57.9 -1.9 Q 60.2 -1.9 61.4 -3.0 Q 62.6 -4.0 62.6 -5.9 Q 62.6 -7.7 61.4 -8.7 Q 60.2 -9.8 58.1 -9.8 L 56.0 -9.8 L 56.0 -12.0 L 58.1 -12.0 Q 60.0 -12.0 61.0 -12.9 Q 62.1 -13.7 62.1 -15.2 Q 62.1 -16.8 61.1 -17.6 Q 60.1 -18.5 58.3 -18.5 Q 57.1 -18.5 55.8 -18.2 Q 54.5 -17.9 53.1 -17.4 L 53.1 -19.9 Q 54.7 -20.3 56.0 -20.6 Q 57.3 -20.8 58.3 -20.8 Q 61.3 -20.8 63.1 -19.3 Q 64.8 -17.8 64.8 -15.3 Q 64.8 -13.6 63.9 -12.5 Q 63.0 -11.4 61.2 -10.9 Z M 78.0 -21.3 L 78.0 3.7 L 72.2 3.7 L 72.2 1.7 L 75.4 1.7 L 75.4 -19.3 L 72.2 -19.3 L 72.2 -21.3 L 78.0 -21.3 Z M 102.3 -7.2 L 116.8 -7.2 L 116.8 -4.8 L 102.3 -4.8 L 102.3 -7.2 Z M 102.3 -12.7 L 116.8 -12.7 L 116.8 -10.4 L 102.3 -10.4 L 102.3 -12.7 Z M 148.4 -20.0 L 148.4 -17.4 Q 147.5 -17.9 146.6 -18.2 Q 145.6 -18.5 144.6 -18.5 Q 141.9 -18.5 140.6 -16.5 Q 139.2 -14.5 139.2 -10.7 Q 139.9 -12.0 141.0 -12.8 Q 142.2 -13.5 143.7 -13.5 Q 146.7 -13.5 148.3 -11.7 Q 149.9 -9.9 149.9 -6.5 Q 149.9 -3.2 148.2 -1.4 Q 146.6 0.4 143.5 0.4 Q 140.0 0.4 138.3 -2.2 Q 136.7 -4.7 136.7 -10.2 Q 136.7 -15.4 138.7 -18.1 Q 140.7 -20.8 144.4 -20.8 Q 145.4 -20.8 146.5 -20.6 Q 147.5 -20.4 148.4 -20.0 Z M 143.5 -11.3 Q 141.7 -11.3 140.7 -10.1 Q 139.7 -8.8 139.7 -6.5 Q 139.7 -4.3 140.7 -3.0 Q 141.7 -1.8 143.5 -1.8 Q 145.3 -1.8 146.2 -3.0 Q 147.2 -4.2 147.2 -6.5 Q 147.2 -8.9 146.2 -10.1 Q 145.3 -11.3 143.5 -11.3 Z M 158.4 -4.2 L 161.8 -4.2 L 161.8 -0.0 L 158.4 -0.0 L 158.4 -4.2 Z M 176.7 -9.1 Q 178.5 -9.1 179.5 -10.3 Q 180.5 -11.6 180.5 -13.8 Q 180.5 -16.1 179.5 -17.3 Q 178.5 -18.6 176.7 -18.6 Q 174.9 -18.6 174.0 -17.4 Q 173.0 -16.2 173.0 -13.8 Q 173.0 -11.5 174.0 -10.3 Q 174.9 -9.1 176.7 -9.1 Z M 171.8 -0.4 L 171.8 -3.0 Q 172.7 -2.5 173.6 -2.2 Q 174.6 -1.9 175.7 -1.9 Q 178.3 -1.9 179.6 -3.9 Q 181.0 -5.9 181.0 -9.7 Q 180.3 -8.4 179.2 -7.6 Q 178.0 -6.9 176.5 -6.9 Q 173.6 -6.9 171.9 -8.7 Q 170.3 -10.5 170.3 -13.9 Q 170.3 -17.2 172.0 -19.0 Q 173.6 -20.8 176.7 -20.8 Q 180.2 -20.8 181.9 -18.2 Q 183.5 -15.7 183.5 -10.2 Q 183.5 -5.0 181.5 -2.3 Q 179.6 0.4 175.8 0.4 Q 174.8 0.4 173.8 0.2 Q 172.7 -0.0 171.8 -0.4 Z" fill="currentColor"/>
+</svg>
+</template>
