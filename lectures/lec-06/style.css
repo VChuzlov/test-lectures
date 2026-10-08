@@ -1,0 +1,92 @@
+/* Локальный style.css лекции.
+   Всё общее лежит в shared/style.css — здесь только то, что специфично
+   для этой лекции. Так тема правится в одном месте на весь курс. */
+
+@import '../../shared/style.css';
+
+/* Фоны титульного слайда.
+   Путь обязан быть написан ЗДЕСЬ, в css внутри папки лекции: тогда это
+   обычный для Vite случай — он сам подставит хеш и базовый URL при сборке.
+   Файлы кладёт tools/build_site.py из shared/pics/, вручную копировать не
+   нужно. Шторка и классы cover-bg / cover-body — в shared/style.css, раздел 5. */
+.cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-light.jpg');
+}
+
+html.dark .cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-dark.jpg');
+}
+
+
+/* ── Вывод программы ─────────────────────────────────────────────────────────
+   Табуляция в выводе -- как в консоли Python, через 8 позиций.              */
+.output { tab-size: 8; }
+
+
+/* ── Соли в двух стаканах (слайд «Два раствора») ───────────────────────────
+   <div class="salts"><b>Стакан 1</b><span>NaCl</span>…<b>Стакан 2</b>…</div>
+   Сетка из пяти столбцов: подпись и четыре плашки в каждой строке.          */
+.salts {
+  display: grid;
+  grid-template-columns: max-content repeat(4, max-content);
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 0.7rem;
+  margin: 0.9rem 0 0.4rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.salts b {
+  padding-right: 0.6rem;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--ink-2);
+}
+.salts span {
+  min-width: 5.2rem;
+  padding: 0.2rem 0.7rem;
+  text-align: center;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 2px solid var(--brand);
+  border-radius: 8px;
+}
+
+
+/* ── Диаграммы Эйлера -- Венна (слайд «Четыре операции») ───────────────────
+   Закрашенная область -- группа .venn-fill, контуры -- .venn-line.
+   Области вырезаются clipPath и mask, фон слайда не участвует, поэтому
+   диаграммы работают в обеих темах.                                         */
+.venns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  margin: 0.2rem 0 0.4rem;
+}
+.slidev-layout .venns figure { margin: 0; text-align: center; }
+.slidev-layout .venns figure svg { max-width: 72%; margin: 0 auto; }
+.slidev-layout .venns figcaption {
+  margin-top: 0.15rem;
+  font-size: 0.8em;
+  line-height: 1.3;
+  color: var(--ink-2);
+}
+.venn .venn-fill { fill: var(--brand); opacity: 0.45; }
+.venn .venn-line { fill: none; stroke: var(--ink-2); stroke-width: 1.6; }
+.venn .venn-t    { fill: var(--ink); font-family: var(--code-font); font-size: 13px; }
+
+
+/* ── Хеш и ячейки множества (слайд «Как множество находит элемент») ────────
+   Схема нарисована SVG прямо в слайде, цвета из токенов темы.              */
+.hsh { max-width: 100%; height: auto; }
+.hsh .hsh-obj   { fill: var(--brand-soft); stroke: var(--brand); stroke-width: 2; }
+.hsh .hsh-num   { fill: var(--surface-2); stroke: var(--ink-2); stroke-width: 1.5; }
+.hsh .hsh-cells rect { fill: var(--surface-2); stroke: var(--line); stroke-width: 1.5; }
+.hsh .hsh-full  { fill: var(--surface-2); stroke: var(--ink-2); stroke-width: 1.5; }
+.hsh .hsh-hit   { fill: var(--brand-soft); stroke: var(--brand); stroke-width: 2; }
+.hsh .hsh-t     { fill: var(--ink); font-family: var(--code-font); font-size: 17px; text-anchor: middle; }
+.hsh .hsh-ts    { fill: var(--ink); font-family: var(--code-font); font-size: 14px; text-anchor: middle; }
+.hsh .hsh-i     { fill: var(--brand); font-family: var(--code-font); font-size: 14px; text-anchor: middle; font-weight: 600; }
+.hsh .hsh-lbl   { fill: var(--ink-muted); font-size: 13px; text-anchor: middle; }
+.hsh .hsh-arrow { stroke: var(--ink-2); stroke-width: 2; fill: none; }
+.hsh .hsh-headpath { fill: var(--ink-2); }
