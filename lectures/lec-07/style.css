@@ -1,0 +1,74 @@
+/* Локальный style.css лекции.
+   Всё общее лежит в shared/style.css — здесь только то, что специфично
+   для этой лекции. Так тема правится в одном месте на весь курс. */
+
+@import '../../shared/style.css';
+
+/* Фоны титульного слайда.
+   Путь обязан быть написан ЗДЕСЬ, в css внутри папки лекции: тогда это
+   обычный для Vite случай — он сам подставит хеш и базовый URL при сборке.
+   Файлы кладёт tools/build_site.py из shared/pics/, вручную копировать не
+   нужно. Шторка и классы cover-bg / cover-body — в shared/style.css, раздел 5. */
+.cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-light.jpg');
+}
+
+html.dark .cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-dark.jpg');
+}
+
+
+/* ── Вывод программы ─────────────────────────────────────────────────────────
+   Табуляция в выводе -- как в консоли Python, через 8 позиций.              */
+.output { tab-size: 8; }
+
+
+/* ── Уравнения реакций (слайд «Уравнено ли уравнение?») ────────────────────
+   <div class="eqs"><span><b>1</b>CH₄ + 2O₂ → CO₂ + 2H₂O</span>…</div>
+   Две колонки по три плашки; номер уравнения -- в кружке слева.            */
+.eqs {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  gap: 0.55rem 1.4rem;
+  margin: 0.8rem 0 0.4rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.eqs span {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.25rem 0.9rem 0.25rem 0.35rem;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 2px solid var(--brand);
+  border-radius: 8px;
+}
+.eqs b {
+  display: grid;
+  place-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  color: var(--surface);
+  background: var(--brand);
+}
+
+
+/* ── Длинная программа мелким кеглем (слайды «Возвращаемся к уравнениям»
+   и «Данные изменились») ─────────────────────────────────────────────────
+   <div class="code-sm"> ```python … ``` </div>
+   Slidev задаёт размер кода переменными, их и переопределяем.               */
+.code-sm {
+  --slidev-code-font-size: 10.5px;
+  --slidev-code-line-height: 14px;
+}
+
+/* Ещё мельче: программа на слайде «Данные изменились» на уровень глубже,
+   и самые длинные её строки иначе не входят в колонку. */
+.code-xs {
+  --slidev-code-font-size: 10px;
+  --slidev-code-line-height: 13.5px;
+}
