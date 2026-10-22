@@ -1,0 +1,106 @@
+/* Локальный style.css лекции.
+   Всё общее лежит в shared/style.css — здесь только то, что специфично
+   для этой лекции. Так тема правится в одном месте на весь курс. */
+
+@import '../../shared/style.css';
+
+/* Фоны титульного слайда.
+   Путь обязан быть написан ЗДЕСЬ, в css внутри папки лекции: тогда это
+   обычный для Vite случай — он сам подставит хеш и базовый URL при сборке.
+   Файлы кладёт tools/build_site.py из shared/pics/, вручную копировать не
+   нужно. Шторка и классы cover-bg / cover-body — в shared/style.css, раздел 5. */
+.cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-light.jpg');
+}
+
+html.dark .cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-dark.jpg');
+}
+
+
+/* ── Вывод программы ─────────────────────────────────────────────────────────
+   Табуляция в выводе -- как в консоли Python, через 8 позиций.              */
+.output { tab-size: 8; }
+
+
+/* ── Уравнение реакции на плашке (слайд «Как вы проверяли уравнение?») ─────
+   <div class="eqs"><span>C₂H₆ + 3O₂ → 2CO₂ + 3H₂O</span></div>
+   Тот же вид, что у плашек уравнений в лекции 7.                           */
+.eqs {
+  display: flex;
+  justify-content: center;
+  margin: 0.6rem 0 0.4rem;
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+.eqs span {
+  padding: 0.25rem 1.1rem;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 2px solid var(--brand);
+  border-radius: 8px;
+}
+
+
+/* ── Дерево вызовов (слайд «Сверху вниз») ──────────────────────────────────
+   <div class="tree"><span>вызов</span><i>пояснение</i> …</div>
+   Две колонки: слева строки дерева с рамками └── ├── (пробелы сохраняются),
+   справа шаги плана. Имена функций -- <b>, пояснения -- <i>.               */
+.tree {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 2.2em;
+  margin: 0.4rem 0 0.6rem;
+  padding: 0.7rem 1.1rem;
+  font-size: 0.82rem;
+  line-height: 1.75;
+  color: var(--ink-2);
+  background: var(--surface-2);
+  border-radius: 8px;
+}
+.tree > span {
+  font-family: var(--slidev-code-font-family, monospace);
+  white-space: pre;
+}
+.tree b {
+  color: var(--brand);
+  font-weight: 600;
+}
+.tree i {
+  font-style: normal;
+  color: var(--ink-muted);
+}
+
+
+/* ── Длинная программа мелким кеглем ───────────────────────────────────────
+   <div class="code-sm"> ```python … ``` </div>
+   Slidev задаёт размер кода переменными, их и переопределяем.               */
+.code-sm {
+  --slidev-code-font-size: 11px;
+  --slidev-code-line-height: 15px;
+}
+
+
+/* ── Две колонки, левая шире: длинный код слева, вывод справа ──────────────
+   <div class="cols-wide"> …код… …вывод… </div>                             */
+.cols-wide {
+  display: grid;
+  gap: 1.1em;
+  align-items: start;
+  grid-template-columns: 1.3fr 1fr;
+}
+
+
+/* ── Положение функции в дереве вызовов (слайды 27–31) ─────────────────────
+   <div class="crumb">is_balanced → count_atoms → <b>parse_formula</b></div>
+   Строка под заголовком; функция слайда выделена цветом.                 */
+.crumb {
+  margin: -0.4rem 0 0.6rem;
+  font-family: var(--slidev-code-font-family, monospace);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+.crumb b {
+  color: var(--brand);
+  font-weight: 600;
+}
