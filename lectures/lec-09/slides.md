@@ -71,8 +71,8 @@ duration: 90min
 - б) **48,9 л**, в) **24,5 л** -- по уравнению Менделеева–Клапейрона: 
 
 $$
-    p \cdot V = n \cdot R \cdot T
-$$, 
+    p \cdot V = n \cdot R \cdot T,
+$$ 
 
 откуда $V = \dfrac{n \cdot R \cdot T}{p}$.
 
