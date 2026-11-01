@@ -1,0 +1,76 @@
+/* Локальный style.css лекции.
+   Всё общее лежит в shared/style.css — здесь только то, что специфично
+   для этой лекции. Так тема правится в одном месте на весь курс. */
+
+@import '../../shared/style.css';
+
+/* Фоны титульного слайда.
+   Путь обязан быть написан ЗДЕСЬ, в css внутри папки лекции: тогда это
+   обычный для Vite случай — он сам подставит хеш и базовый URL при сборке.
+   Файлы кладёт tools/build_site.py из shared/pics/, вручную копировать не
+   нужно. Шторка и классы cover-bg / cover-body — в shared/style.css, раздел 5. */
+.cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-light.jpg');
+}
+
+html.dark .cover-bg {
+  background-image: var(--cover-scrim), url('./pics/cover-dark.jpg');
+}
+
+
+/* ── Вывод программы ─────────────────────────────────────────────────────────
+   Табуляция в выводе -- как в консоли Python, через 8 позиций.              */
+.output { tab-size: 8; }
+
+
+/* ── Плашки условий задачи (слайд «Объём газа при разных условиях») ───────
+   <div class="conds"><span><b>а</b>н. у.: 0 °C, 101,3 кПа</span>…</div>
+   Три плашки в ряд; буква пункта -- в кружке слева.                       */
+.conds {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
+  margin: 0.7rem 0 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.conds span {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.25rem 0.9rem 0.25rem 0.35rem;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 2px solid var(--brand);
+  border-radius: 8px;
+}
+.conds b {
+  display: grid;
+  place-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  color: var(--surface);
+  background: var(--brand);
+}
+
+
+/* ── Длинная программа мелким кеглем ───────────────────────────────────────
+   <div class="code-sm"> ```python … ``` </div>
+   Slidev задаёт размер кода переменными, их и переопределяем.               */
+.code-sm {
+  --slidev-code-font-size: 11px;
+  --slidev-code-line-height: 15px;
+}
+
+
+/* ── Две колонки, левая шире: длинный код слева, вывод справа ──────────────
+   <div class="cols-wide"> …код… …вывод… </div>                             */
+.cols-wide {
+  display: grid;
+  gap: 1.1em;
+  align-items: start;
+  grid-template-columns: 1.3fr 1fr;
+}
